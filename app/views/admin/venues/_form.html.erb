@@ -1,6 +1,7 @@
 <%= simple_form_for @venue, url: url, local: true, html: { novalidate: true, class: 'needs-validation' }  do |f| %>
 <%= f.input :name, required: true %>
 <%= f.input :description, as: :text, required: true %>
-<%= f.input :image, required: true %>
+<%= f.input :phone, required: true %>
+<%= f.input :image %>
 <%= f.button :submit, required: true %>
 <% end %>
