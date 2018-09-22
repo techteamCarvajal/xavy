@@ -1,0 +1,26 @@
+// Place all the styles related to the venues controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.venues {
+  margin-top: 3rem;
+
+  .title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .separator {
+    max-width: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 3px solid $primary;
+  }
+  &__cover {
+    margin-top: 1rem;
+    min-height: 40vh;
+    background-size: cover;
+    background-position: center;
+  }
+}

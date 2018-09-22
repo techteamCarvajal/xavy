@@ -1,0 +1,18 @@
+<div class="container bg-white shadow-sm d-flex flex-grow-1 flex-column">
+  <div class="venues__cover" style="background-image: url(<%= url_for(@venue.image )%>) ">
+  </div>
+  <h1 class="h4 mt-4">
+    <%= @venue.name %>
+  </h1>
+  <div class="text-muted">
+    <%= @venue.description %>
+  </div>
+  <div class="mt-4">
+    <div class="row">
+      <%= render partial: 'activity', collection: @venue.activities %>
+    </div>
+  </div>
+  <div class="block">
+    <%= link_to 'Volver', venues_path, class: 'btn btn-primary' %>
+  </div>
+</div>

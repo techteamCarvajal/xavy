@@ -55,10 +55,14 @@ Para iniciar el proyecto se deben seguir los siguientes pasos:
 
 5. Ejecutar la aplicación `rails server`
 
+6. Entrar a http://localhost:3000 para ver la aplicación
+
+7. Entrar a http://localhost:3000/admin para ver el panel de administrador
+
 Comandos adicionales:
 
-1. Ejecutar las pruebas unitarias `rails test`
-2. Abrir la consola de rails (permite ejecutar comandos usando las clases definidas dentro del proyecto) `rails console`
+8. Ejecutar las pruebas unitarias `rails test`
+9. Abrir la consola de rails (permite ejecutar comandos usando las clases definidas dentro del proyecto) `rails console`
 
 PD: Antes de ejecutar las pruebas unitarias se debe crear/actualizar la base de datos de pruebas
 

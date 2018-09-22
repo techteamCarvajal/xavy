@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+$primary: #38c172;
+$secondary: #fff382;
+$success: #38c172;
+$info: #6cb2eb;
+$warning: #fff382;
+$danger: #ef5753;
+$light: #f8fafc;
+$dark: #22292f;
+
+$body-bg: $light;
+$body-color: $dark;
+
+@import 'bootstrap';
+@import 'venues';
+@import 'admin';
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.svg-icon {
+  font-size: 16px;
+  color: #6f7e85;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+}
+
+.panel {
+  background-color: $white;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  &__header {
+    border-bottom: 1px solid #dfe0e1;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__actions {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

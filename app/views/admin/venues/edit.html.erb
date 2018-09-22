@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <div class="panel">
+    <div class="panel__header">
+      <h5>Editar centro deportivo</h5>
+      <%= link_to 'Cancel', admin_venues_path, class: 'btn btn-outline-danger' %>
+    </div>
+    <div class="panel__content">
+      <%= render 'form', url: admin_venue_path(@venue) %>
+    </div>
+  </div>
+</div>

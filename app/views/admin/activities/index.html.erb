@@ -1,0 +1,25 @@
+<% content_for :header do %>
+<div class="admin__header">
+  <h5 class="mr-auto">
+    Actividades
+  </h5>
+  <%= link_to 'Nuevo', new_admin_activity_path, class: 'btn btn-outline-success' %>
+</div>
+<% end %>
+
+<div class="admin__content">
+  <table class="table admin__table">
+    <thead>
+      <tr>
+        <th class="border-top-0" scope="col-6">Centro</th>
+        <th class="border-top-0" scope="col-6">Nombre</th>
+        <th class="border-top-0" scope="col-6">Descripción</th>
+        <th class="border-top-0" scope="col-6">Horario</th>
+        <th class="border-top-0" scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @activities %>
+    </tbody>
+  </table>
+</div>

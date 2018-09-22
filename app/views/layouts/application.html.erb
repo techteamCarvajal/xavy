@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Xavy</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>Xavy</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body class="body">
+  <%= render partial: 'layouts/navigation'%>
+  <main class="d-flex flex-grow-1  flex-column bg-">
     <%= yield %>
-  </body>
+  </main>
+</body>
+
 </html>

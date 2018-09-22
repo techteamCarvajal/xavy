@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Xavy</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <%= render 'layouts/navigation' %>
+
+  <div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+      <div class="col-12 col-md-3 col-xl-2 admin__sidebar">
+        <div class="admin__sidenav__actions">
+          <%= link_to 'Salir', root_path, class: 'btn btn-outline-danger' %>
+          <button class="btn btn-light d-md-none p-0 ml-3 collapsed" type="button" data-toggle="collapse" data-target="#admin-side-nav"
+            aria-controls="admin-side-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
+              <title>Menu</title>
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path>
+            </svg>
+          </button>
+        </div>
+        <nav id="admin-side-nav" class="admin__links collapse">
+          <ul class="admin__sidenav list-unstyled">
+            <li>
+              <%= link_to 'Actividades', admin_activities_path %>
+            </li>
+            <li>
+              <%= link_to 'Centros', admin_venues_path %>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <main class="col-12 col-md-9 col-xl-10 admin__main" role="main">
+        <%= yield(:header) %>
+
+        <% unless flash.empty? %>
+        <% flash.each do |key, value| %>
+        <div class="container">
+          <div class="alert alert-<%= key %>">
+            <%= value %>
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+
+        <%= content_for?(:content) ? yield(:content) : yield %>
+
+      </main>
+    </div>
+
+  </div>
+</body>
+
+</html>
