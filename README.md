@@ -47,22 +47,27 @@ Para iniciar el proyecto se deben seguir los siguientes pasos:
 1. Descargar el código
    `git clone https://github.com/usuario-github/xavy.git`
 
-2. Crear la base de datos `rails db:create`
+2. Instalar las librerias del proyecto `bundle install`
 
-3. Ejecutar las migraciones `rails db:migrate`
+3. Ejecutar el comando `bundle exec rails app:update:bin`  
 
-4. Cargar los datos de prueba `rails db:seed`
+3. Crear la base de datos `bundle exec rails db:create`
 
-5. Ejecutar la aplicación `rails server`
+4. Ejecutar las migraciones `bundle exec rails db:migrate`
 
-6. Entrar a http://localhost:3000 para ver la aplicación
+5. Cargar los datos de prueba `bundle exec rails db:seed`
 
-7. Entrar a http://localhost:3000/admin para ver el panel de administrador
+6. Ejecutar la aplicación `bundle exec rails server`
+
+7. Entrar a http://localhost:3000 para ver la aplicación
+
+8. Entrar a http://localhost:3000/admin para ver el panel de administrador
 
 Comandos adicionales:
 
-8. Ejecutar las pruebas unitarias `rails test`
-9. Abrir la consola de rails (permite ejecutar comandos usando las clases definidas dentro del proyecto) `rails console`
+9. Ejecutar las pruebas unitarias `rails test`
+
+10. Abrir la consola de rails (permite ejecutar comandos usando las clases definidas dentro del proyecto) `rails console`
 
 PD: Antes de ejecutar las pruebas unitarias se debe crear/actualizar la base de datos de pruebas
 
