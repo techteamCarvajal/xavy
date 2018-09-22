@@ -21,8 +21,8 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
   adapter: postgresql
   encoding: unicode
   username: xavy
   password: <%= ENV['BINANCE_DATABASE_PASSWORD'] %>
+  pool: 5
