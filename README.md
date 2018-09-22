@@ -132,3 +132,7 @@ Si se considera necesario se permite agregar librerías tanto en ruby como en ja
 El código del ejercicio se debe sincronizar con la copia personal del proyecto en github y enviar el link a sistemas(at)savy.co.
 
 Opcionalmente se puede hacer un despliegue (gratuito) a [heroku](https://www.heroku.com/) e inlcuir la URL del proyecto par que sea más fácil revisarlo.
+
+### Demo
+
+Una versión demo de la aplicación se puede encontrar en https://xavy.herokuapp.com/
