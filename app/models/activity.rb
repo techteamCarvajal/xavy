@@ -19,4 +19,8 @@ class Activity < ApplicationRecord
   belongs_to :venue
 
   scope :by_name, -> { order(:name) }
+
+  validates :name, presence: true, uniqueness: true
+  validates :description, presence: true
+  validates :schedule, presence: true
 end

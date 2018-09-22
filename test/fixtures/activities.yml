@@ -19,10 +19,10 @@
 
 one:
   venue: one
-  name: MyString
+  name: Clase de crossfit
   schedule: MyText
 
 two:
   venue: two
-  name: MyString
+  name: Kundalini yoga
   schedule: MyText

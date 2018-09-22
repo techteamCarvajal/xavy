@@ -10,5 +10,4 @@ Rails.application.routes.draw do
   end
 
   resources :venues, only: [:index, :show]
-  resources :activities, only: [:index]
 end

@@ -1,5 +1,5 @@
 <div class="container bg-white shadow-sm d-flex flex-grow-1 flex-column">
-  <div class="venues__cover" style="background-image: url(<%= url_for(@venue.image )%>) ">
+  <div class="venues__cover" style="background-image: url(<%= url_for(@venue.image) if @venue.image.attached? %>) ">
   </div>
   <h1 class="h4 mt-4">
     <%= @venue.name %>

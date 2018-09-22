@@ -13,9 +13,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: Mental crossfit
   description: MyString
+  phone: '3102124705'
 
 two:
-  name: MyString
+  name: Yoga Place
   description: MyString
