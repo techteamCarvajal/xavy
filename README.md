@@ -27,7 +27,7 @@ Seguir las instrucciones de este link (https://gorails.com/setup/osx/10.13-high-
 
 #### Windows
 
-1. Instalar ruby: [windows](https://rubyinstaller.org/)
+1. Instalar ruby 2.6.1 con DevKit: [windows](https://rubyinstaller.org/)
 2. Desde la consola de comandos en modo administrador instalar bundler:
 
    `gem install bundler`
@@ -49,7 +49,7 @@ Para iniciar el proyecto se deben seguir los siguientes pasos:
 
 2. Instalar las librerias del proyecto `bundle install`
 
-3. Ejecutar el comando `bundle exec rails app:update:bin`  
+3. Ejecutar el comando `bundle exec rails app:update:bin`
 
 3. Crear la base de datos `bundle exec rails db:create`
 
