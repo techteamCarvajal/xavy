@@ -34,7 +34,7 @@ Seguir las instrucciones de este link (https://gorails.com/setup/osx/10.13-high-
 
 3. Desde la consola de comandos en modo administrador instalar bundler:
 
-   `gem install rails 5.2.1`
+   `gem install rails 5.2.2`
 
 4. Instalar SQLLite3 siguiendo estas indicaciones (https://www.tutorialspoint.com/sqlite/sqlite_installation.htm)
 
