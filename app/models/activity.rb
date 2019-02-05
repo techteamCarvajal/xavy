@@ -3,6 +3,7 @@
 # Table name: activities
 #
 #  id          :integer          not null, primary key
+#  complexity  :string
 #  description :text
 #  name        :string
 #  schedule    :text
@@ -17,10 +18,10 @@
 
 class Activity < ApplicationRecord
   belongs_to :venue
-
+  has_and_belongs_to_many :categories
   scope :by_name, -> { order(:name) }
-
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true
   validates :schedule, presence: true
+  validates :complexity, presence: true
 end

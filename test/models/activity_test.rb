@@ -3,6 +3,7 @@
 # Table name: activities
 #
 #  id          :integer          not null, primary key
+#  complexity  :string
 #  description :text
 #  name        :string
 #  schedule    :text
@@ -36,6 +37,10 @@ class ActivityTest < ActiveSupport::TestCase
 
   test 'should validate presence of schedule' do
     assert_must validate_presence_of(:schedule), @activity
+  end
+
+  test 'should validate presence of complexity' do
+    assert_must validate_presence_of(:complexity), @activity
   end
 
   test 'by_name should order activities alphabetically' do

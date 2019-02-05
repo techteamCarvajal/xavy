@@ -2,6 +2,12 @@
 <%= f.input :name, required: true %>
 <%= f.input :description, as: :text, required: true %>
 <%= f.input :schedule, as: :text, required: true %>
+
+<label>Nivel de dificultad</label>
+ <%= f.select :complexity, options_for_select([["Alta", "Alta"], ["Media", "Media"],["Baja", "Baja"]],:selected => @activity.complexity), {:prompt => "Seleccionar nivel de dificultad"},{:class => "form-control is-valid select required", required: true} %> 
 <%= f.input :venue_id, collection: Venue.by_name, as: :select, label_method: :name, value_method: :id, required: true %>
+
+
+ <br>
 <%= f.button :submit %>
 <% end %>
