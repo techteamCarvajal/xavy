@@ -1,13 +1,17 @@
 <%= simple_form_for @activity, url: url, html: { novalidate: true, class: 'needs-validation' }   do |f| %>
-<%= f.input :name, required: true %>
-<%= f.input :description, as: :text, required: true %>
-<%= f.input :schedule, as: :text, required: true %>
+	<%= f.input :name, required: true %>
+	<%= f.input :description, as: :text, required: true %>
+	<%= f.input :schedule, as: :text, required: true %>
 
-<label>Nivel de dificultad</label>
- <%= f.select :complexity, options_for_select([["Alta", "Alta"], ["Media", "Media"],["Baja", "Baja"]],:selected => @activity.complexity), {:prompt => "Seleccionar nivel de dificultad"},{:class => "form-control is-valid select required", required: true} %> 
-<%= f.input :venue_id, collection: Venue.by_name, as: :select, label_method: :name, value_method: :id, required: true %>
+	<label>Nivel de dificultad</label>
+ 	<%= f.select :complexity, options_for_select([["Alta", "Alta"], ["Media", "Media"],["Baja", "Baja"]],:selected => @activity.complexity), {:prompt => "Seleccionar nivel de dificultad"},{:class => "form-control is-valid select required", required: true} %> 
 
-
+	<%= f.input :venue_id, collection: Venue.by_name, as: :select, label_method: :name, value_method: :id, required: true %>
+	<label>Categorias</label>
+		<div class="checkbox">
+	    <%= collection_check_boxes(:activity, :category_ids, Category.all, :id, :name, {}, 
+	    { :multiple => true} )%>
+	 </div>
  <br>
 <%= f.button :submit %>
 <% end %>

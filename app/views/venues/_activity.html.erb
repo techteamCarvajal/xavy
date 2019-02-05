@@ -10,7 +10,13 @@
       <p class="card-text">
        Dificultad: <%= activity.complexity %>
       </p>
-
+      <% if activity.categories.empty?%>
+        <p>No hay categorias registradas</p>
+         <% else %>
+          <p class="card-text">
+       Categorias: <%= activity.categories.map(&:name).join(', ') %>
+      </p>
+      <% end %>
     </div>
   </div>
 </div>

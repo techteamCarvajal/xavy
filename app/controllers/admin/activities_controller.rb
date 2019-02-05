@@ -20,7 +20,7 @@ class Admin::ActivitiesController < Admin::ApplicationController
     @activity = Activity.new(activity_params)
       params[:activity][:category_ids].each do |category_id|
       unless category_id.empty?
-      category = Category.find(product_id)
+      category = Category.find(category_id)
         @activity.categories << category
       end
     end
