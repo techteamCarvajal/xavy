@@ -14,6 +14,10 @@
    <td>
     <%= activity.complexity %>
   </td>
+
+   <td>
+    <%= activity.categories.map(&:name).join(', ') %>
+  </td>
   
 
   <td class="text-right">
