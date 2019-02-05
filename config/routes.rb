@@ -5,9 +5,10 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get '/' => 'activities#index'
+    resources :categories
     resources :activities
     resources :venues
   end
-
+  resources :categories, only: [:index, :show]
   resources :venues, only: [:index, :show]
 end
