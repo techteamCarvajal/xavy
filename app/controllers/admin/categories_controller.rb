@@ -18,7 +18,7 @@ class Admin::CategoriesController < Admin::ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      flash[:success] = 'Categoria fue creado exitosamente'
+      flash[:success] = 'Categoria fue creada exitosamente'
       redirect_to admin_categories_url
     else
       flash[:warning] = @category.errors.full_messages.to_sentence
@@ -28,7 +28,7 @@ class Admin::CategoriesController < Admin::ApplicationController
 
   def update
     if @category.update(category_params)
-      flash[:success] = 'Categoria fue actualizado exitosamente'
+      flash[:success] = 'Categoria fue actualizada exitosamente'
       redirect_to admin_categories_url
     else
       flash[:warning] = @categorie.errors.full_messages.to_sentence
@@ -38,7 +38,7 @@ class Admin::CategoriesController < Admin::ApplicationController
 
   def destroy
     if @category.destroy
-      flash[:success] = 'Categoria fue destruido exitosamente'
+      flash[:success] = 'Categoria fue eliminada exitosamente'
       redirect_to admin_categories_url
     else
       flash[:warning] = @category.errors.full_messages.to_sentence
