@@ -37,14 +37,15 @@ class Admin::ActivitiesController < Admin::ApplicationController
 
 
   def update
-    params[:activity][:category_ids].each do |category_id|
+ 
+
+    if @activity.update(activity_params)
+       params[:activity][:category_ids].each do |category_id|
       unless category_id.empty?
       category = Category.find(category_id)
         @activity.categories << category
       end
     end
-
-    if @activity.update(activity_params)
       flash[:success] = 'Actividad fue actualizada exitosamente'
       redirect_to admin_activities_url
     else

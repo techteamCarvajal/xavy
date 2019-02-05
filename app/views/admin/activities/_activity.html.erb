@@ -16,7 +16,11 @@
   </td>
 
    <td>
+    <% if activity.categories.empty?%>
+        <p>No hay categorias registradas</p>
+    <% else %>
     <%= activity.categories.map(&:name).join(', ') %>
+        <% end %>
   </td>
   
 
