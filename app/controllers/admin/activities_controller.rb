@@ -15,8 +15,17 @@ class Admin::ActivitiesController < Admin::ApplicationController
   def edit
   end
 
+
   def create
     @activity = Activity.new(activity_params)
+      params[:activity][:category_ids].each do |category_id|
+      unless category_id.empty?
+      category = Category.find(product_id)
+        @activity.categories << category
+      end
+    end
+
+
     if @activity.save
       flash[:success] = 'Actividad fue creada exitosamente'
       redirect_to admin_activities_url
@@ -26,7 +35,15 @@ class Admin::ActivitiesController < Admin::ApplicationController
     end
   end
 
+
   def update
+    params[:activity][:category_ids].each do |category_id|
+      unless category_id.empty?
+      category = Category.find(category_id)
+        @activity.categories << category
+      end
+    end
+
     if @activity.update(activity_params)
       flash[:success] = 'Actividad fue actualizada exitosamente'
       redirect_to admin_activities_url
