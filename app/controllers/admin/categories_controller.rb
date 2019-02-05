@@ -1,12 +1,12 @@
 class Admin::CategoriesController < Admin::ApplicationController
-  before_action :set_venue, only: [:show, :edit, :update, :destroy]
+  before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   def index
-    @categories = Venue.by_name
+    @categories = Category.all
   end
 
   def new
-    @category = Venue.new
+    @category = Category.new
   end
 
   def show
@@ -16,7 +16,7 @@ class Admin::CategoriesController < Admin::ApplicationController
   end
 
   def create
-    @category = Categorie.new(category_params)
+    @category = Category.new(category_params)
     if @category.save
       flash[:success] = 'Categoria fue creado exitosamente'
       redirect_to admin_categories_url
@@ -48,11 +48,11 @@ class Admin::CategoriesController < Admin::ApplicationController
 
   private
 
-  def set_venue
+  def set_category
     @category = Category.find(params[:id])
   end
 
-  def venue_params
+  def category_params
     params.require(:category).permit(:name,
                                   :description)
   end

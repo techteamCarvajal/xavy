@@ -1,0 +1,11 @@
+<div class="container bg-white shadow-sm d-flex flex-grow-1 flex-column">
+   <h1 class="h4 mt-4">
+    <%= @category.name %>
+  </h1>
+  <div class="text-muted">
+    <%= @category.description %>
+  </div>
+  <div class="block">
+    <%= link_to 'Volver', categories_path, class: 'btn btn-primary' %>
+  </div>
+</div>

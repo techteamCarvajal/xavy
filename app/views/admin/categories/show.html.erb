@@ -1,0 +1,27 @@
+<div class="container mx-auto my-4">
+  <div class="panel">
+    <div class="panel__header">
+      <h5 class="mr-auto">
+        <%= @category.name %>
+      </h5>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          ...
+        </button>
+        <div class="dropdown-menu">
+          <%= link_to t('actions.edit'), edit_admin_category_path(@category), class: 'dropdown-item' %>
+          <%= link_to t('actions.destroy'), admin_category_path(@category), class: 'dropdown-item', method: :delete, data: { confirm: t('actions.confirm') } %>
+        </div>
+      </div>
+    </div>
+    <div class="panel__content">
+      <div class="mb-2">
+        <p><strong>
+            Descripción:</strong>
+          <%= @category.description %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
