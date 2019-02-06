@@ -22,6 +22,27 @@
           <%= @category.description %>
         </p>
       </div>
+         <div class="my-5">
+        <div class="d-flex py-2">
+          <h5 class="mr-auto">Actividades</h5>
+        </div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th class="border-top-0" scope="col-6">Centro</th>
+              <th class="border-top-0" scope="col-6">Nombre</th>
+              <th class="border-top-0" scope="col-6">Descripción</th>
+              <th class="border-top-0" scope="col-6">Horario</th>
+              <th class="border-top-0" scope="col-6">Dificultad</th>
+              <th class="border-top-0" scope="col-6">Categorías</th>
+              <th class="border-top-0" scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+         <%= render partial: 'admin/activities/activity', collection: @category.activities %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
